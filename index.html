@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow // Advanced To-Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <header>
+            <h1>TaskFlow</h1>
+            <p id="progress-text">0 of 0 tasks completed</p>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </header>
+
+        <form id="todo-form" autocomplete="off">
+            <input type="text" id="todo-input" placeholder="What needs to be done?" required>
+            <button type="submit" aria-label="Add Task">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+        </form>
+
+        <div class="filter-controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <button id="clear-completed-btn" class="utility-btn">Clear Completed</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
